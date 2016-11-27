@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EFDFB905-FFD3-4EC7-AC36-CDE8D8E6F2D5}"
-	ProjectSection(SolutionItems) = preProject
-		Package.nuspec = Package.nuspec
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libria.AmbientContext", "src\Libria.AmbientContext\Libria.AmbientContext.csproj", "{117701DD-0246-42ED-8B63-85B06B3C093A}"
 EndProject
