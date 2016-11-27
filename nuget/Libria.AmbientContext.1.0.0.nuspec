@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Libria.AmbientContext</id>
+        <version>1.0.0</version>
+        <title>Libria.AmbientContext</title>
+        <authors>Libria</authors>
+        <projectUrl>https://github.com/pfms/Libria.AmbientContext</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Base implementation for ambient contexts</description>
+        <tags>Libria AmbientContext Scope</tags>
+    </metadata>
+    <files>
+        <file src="..\src\Libria.AmbientContext\bin\Release-Net45\Libria.AmbientContext.dll" target="lib\net45\Libria.AmbientContext.dll" />
+        <file src="..\src\Libria.AmbientContext\bin\Release-Net46\Libria.AmbientContext.dll" target="lib\net46\Libria.AmbientContext.dll" />
+    </files>
+</package>

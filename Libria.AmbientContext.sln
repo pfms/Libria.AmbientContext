@@ -13,6 +13,8 @@ Global
 		Debug-Net45|Any CPU = Debug-Net45|Any CPU
 		Debug-Net46|Any CPU = Debug-Net46|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Release-Net45|Any CPU = Release-Net45|Any CPU
+		Release-Net46|Any CPU = Release-Net46|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug-Net46|Any CPU.Build.0 = Debug-Net46|Any CPU
 		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release-Net45|Any CPU.ActiveCfg = Release-Net45|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release-Net45|Any CPU.Build.0 = Release-Net45|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release-Net46|Any CPU.ActiveCfg = Release-Net46|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release-Net46|Any CPU.Build.0 = Release-Net46|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
