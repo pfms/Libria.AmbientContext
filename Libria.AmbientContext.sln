@@ -3,8 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EFDFB905-FFD3-4EC7-AC36-CDE8D8E6F2D5}"
+	ProjectSection(SolutionItems) = preProject
+		Package.nuspec = Package.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libria.AmbientContext", "src\Libria.AmbientContext\Libria.AmbientContext.csproj", "{117701DD-0246-42ED-8B63-85B06B3C093A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug-Net45|Any CPU = Debug-Net45|Any CPU
+		Debug-Net46|Any CPU = Debug-Net46|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug-Net45|Any CPU.ActiveCfg = Debug-Net45|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug-Net45|Any CPU.Build.0 = Debug-Net45|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug-Net46|Any CPU.ActiveCfg = Debug-Net46|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Debug-Net46|Any CPU.Build.0 = Debug-Net46|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117701DD-0246-42ED-8B63-85B06B3C093A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{117701DD-0246-42ED-8B63-85B06B3C093A} = {EFDFB905-FFD3-4EC7-AC36-CDE8D8E6F2D5}
 	EndGlobalSection
 EndGlobal
