@@ -1,26 +1,26 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using Libria.AmbientContext.Interfaces;
-
-#if NET46
+﻿#if NET46
 using System.Threading;
 #endif
-
+using System;
+using System.Runtime.CompilerServices;
+using Libria.AmbientContext.Interfaces;
 #if NET45
 using System.Runtime.Remoting.Messaging;
+
 #endif
 
 namespace Libria.AmbientContext
 {
-	public abstract class BaseScope<TImpl> : IScope where TImpl : BaseScope<TImpl>
+	public abstract class BaseScope<TImpl, TData> : IScope where TImpl : BaseScope<TImpl, TData>
 	{
 		private readonly string _instanceIdentifier = Guid.NewGuid().ToString("N");
 		private readonly ScopeOption _scopeOption;
 		protected readonly bool Nested;
 		private TImpl _savedScope;
 		protected bool Disposed;
+		protected TData ScopeData;
 
-		protected BaseScope(ScopeOption option = ScopeOption.Required)
+		protected BaseScope(TData fallbackScopeData = default(TData), ScopeOption option = ScopeOption.Required)
 		{
 			_scopeOption = option;
 			Disposed = false;
@@ -37,10 +37,12 @@ namespace Libria.AmbientContext
 			if (ParentScope != null && option == ScopeOption.Required)
 			{
 				Nested = true;
+				ScopeData = ParentScope.ScopeData;
 			}
 			else
 			{
 				Nested = false;
+				ScopeData = fallbackScopeData;
 			}
 
 			AmbientScope.SetCurrentScope((TImpl) this);
@@ -95,9 +97,19 @@ namespace Libria.AmbientContext
 					throw new Exception("Something went terribly wrong with the order of disposing");
 				}
 
+				if (_scopeOption == ScopeOption.Required)
+				{
+					PassScopeDataToParent();
+				}
+
 				AmbientScope.SetCurrentScope(ParentScope);
 			}
 			Disposed = true;
+		}
+
+		protected virtual void PassScopeDataToParent()
+		{
+			ParentScope.ScopeData = ScopeData;
 		}
 
 		internal static class AmbientScope
